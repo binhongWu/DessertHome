@@ -1,0 +1,31 @@
+package com.wbh.util;
+
+import java.util.ResourceBundle;
+
+/**
+ * 公共工具类
+ * @author admin
+ *
+ */
+public class CommonUtil {
+	/**
+	 * 读取配置文件
+	 */
+	public static ResourceBundle bundle;
+	
+	static{
+		bundle = ResourceBundle.getBundle("config");
+	}
+	/**
+	 * 获取配置文件中每页的大小
+	 * @return
+	 */
+	public static int getSize(){
+		String s = bundle.getString("size");
+		int size = 0;
+		if(s != null){
+			size = Integer.parseInt(s);
+		}
+		return size;
+	}
+}

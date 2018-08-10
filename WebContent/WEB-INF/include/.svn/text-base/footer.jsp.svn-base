@@ -1,0 +1,55 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!-- 页脚 -->
+<style>
+/*	页脚——开始*/
+	.ypp_foot{
+		width:100%;
+		background-color: #333333;
+		color:white;
+	}
+	.ypp_foot_container{
+/*		border: 1px solid brown;*/
+		color:white;
+		text-align: center;
+		padding:10px 0px 10px 0px;
+		background-color: #333333;
+	}
+	.ypp_foot_p1{
+		width:120px;
+/*		border: 1px solid red;*/
+		margin-top:10px;
+	}
+	.ypp_foot_p1 div{
+		float:left;
+	}
+	.ypp_foot_logo{
+		width:50px;
+		height: 50px;
+		background-size: cover;
+		background-image: url(image/logo_white.png);
+	}
+	.ypp_foot_title{
+		line-height: 50px;
+/*		border: 1px solid red;*/
+		font-family: Blackadder ITC;
+/*		font-weight: bold;*/
+		font-size: 23px;
+		color:white;
+	}
+	.ypp_foot_p2{
+		color:white;
+/*		border: 1px solid red;*/
+		padding: 10px;
+	}
+	
+/*	页脚——结束*/
+</style>
+<div class="ypp_foot">
+	<div class="ypp_foot_container">
+		<div class="ypp_foot_p1 clear">
+			<div class="ypp_foot_logo"></div>
+			<div class="ypp_foot_title">Dessert</div>
+		</div>
+		<div class="ypp_foot_p2">Copyright© DessertHome甜品小屋 2017-2019</div>
+	</div>
+</div>

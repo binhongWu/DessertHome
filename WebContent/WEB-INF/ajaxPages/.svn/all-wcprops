@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/project/!svn/ver/2319/DessertHome/WebRoot/WEB-INF/ajaxPages
+END
+noCollection.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/project/!svn/ver/2146/DessertHome/WebRoot/WEB-INF/ajaxPages/noCollection.jsp
+END
+noOrder.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/project/!svn/ver/2146/DessertHome/WebRoot/WEB-INF/ajaxPages/noOrder.jsp
+END
+ajaxShowMessage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/project/!svn/ver/2128/DessertHome/WebRoot/WEB-INF/ajaxPages/ajaxShowMessage.jsp
+END
+ajaxCity.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/project/!svn/ver/1838/DessertHome/WebRoot/WEB-INF/ajaxPages/ajaxCity.jsp
+END
+ajaxDeleteCollect.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/project/!svn/ver/2259/DessertHome/WebRoot/WEB-INF/ajaxPages/ajaxDeleteCollect.jsp
+END
+ajaxShowDessert.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/project/!svn/ver/2319/DessertHome/WebRoot/WEB-INF/ajaxPages/ajaxShowDessert.jsp
+END
+ajaxDeleteOrder.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/project/!svn/ver/2261/DessertHome/WebRoot/WEB-INF/ajaxPages/ajaxDeleteOrder.jsp
+END

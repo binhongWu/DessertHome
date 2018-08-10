@@ -1,0 +1,106 @@
+package com.wbh.model;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
+import com.wbh.dao.DessertDao;
+import com.wbh.dao.KindDao;
+import com.wbh.dao.TasteDao;
+import com.wbh.mvc.model.DispatchModel;
+import com.wbh.mvc.model.ModelSupport;
+import com.wbh.pojo.Dessert;
+import com.wbh.pojo.Kind;
+import com.wbh.pojo.Taste;
+
+public class ShowDessertModel extends DispatchModel {
+	KindDao kindDao;
+	TasteDao tasteDao;
+	DessertDao dessertDao;
+	public ShowDessertModel(){
+		kindDao=new KindDao();
+		tasteDao = new TasteDao();
+		dessertDao = new DessertDao();
+	}
+	@Override
+	public String execute() {
+		//用于是页面初始化，还是AJAX请求
+		int count=-100;
+		//查找所有分类
+		List<Kind> kindList=kindDao.findAllKind();
+//		System.out.println(kindList.size());
+		HttpServletRequest request=ModelSupport.getRequest();
+		int kindId = 0;
+		int tasteId = 0;
+		
+		try {
+			//获得分类Id
+			if(request.getParameter("kindId") != null){
+				kindId = Integer.parseInt(request.getParameter("kindId"));
+			}
+			//获得口味Id
+			if(request.getParameter("tasteId") != null){
+				tasteId = Integer.parseInt(request.getParameter("tasteId"));
+			}
+			if(request.getParameter("count") != null){
+				System.out.println("count is not null");
+				count = Integer.parseInt(request.getParameter("count"));
+				
+			}
+		} catch (NumberFormatException e) {
+			e.printStackTrace();
+		}
+		//根据甜品分类查找该分类下的所有口味
+		List<Taste> tasteList = null;
+		//kind对象
+		Kind kindObj = null;
+		if(kindId == 0){
+			//查找所有分类的所有的口味
+			tasteList = tasteDao.findAllTaste();
+		}else{
+			//根据分类查找口味
+			tasteList = tasteDao.findTasteByKindId(kindId);
+			//查找Kind对象
+			kindObj = kindDao.findKindByKindId(kindId);
+		}
+		System.out.println("count:"+count+"?????");
+		System.out.println("kindId:"+kindId);
+		if(kindObj != null){
+			System.out.println(kindObj.getKindName()+"////////////////");
+		}else{
+			System.out.println("is null/////////////////");
+		}
+		//根据甜品分类和口味查找甜品
+		List<Dessert> dessertList = null;
+		//根据条件查找甜点（分为4种情况）
+		if(kindId == 0 && tasteId == 0){
+			dessertList = dessertDao.findAllDessert();
+		}else if(kindId == 0 && tasteId != 0){
+			dessertList = dessertDao.findDessertByTasteId(tasteId);
+		}else if(kindId != 0 && tasteId == 0){
+			dessertList = dessertDao.findDessertByKindId(kindId);
+		}else{
+			dessertList = dessertDao.findDessertByKindIdTasteId(kindId, tasteId);
+		}
+		System.out.println("kindId="+kindId+";tasteId="+tasteId);
+		System.out.println("kindList:"+kindList.size());
+		System.out.println("tasteList:"+tasteList.size());
+		System.out.println("dessertList:"+dessertList.size());
+		//传入参数
+		request.setAttribute("kindId", kindId);
+		request.setAttribute("kindObj", kindObj);
+		request.setAttribute("tasteId", tasteId);
+		request.setAttribute("kindList", kindList);
+		request.setAttribute("tasteList", tasteList);
+		request.setAttribute("dessertList", dessertList);
+		//页面跳转
+		if(count==0){
+			return "showDessert";
+		}else{
+			return "ajaxShowDessert";
+		}
+		
+		
+	}
+	
+}

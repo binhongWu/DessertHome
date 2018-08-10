@@ -1,0 +1,84 @@
+package com.niit.model;
+
+import java.util.List;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.niit.dao.CartRecordDao;
+import com.niit.dao.UserDao;
+import com.niit.mvc.model.DispatchModel;
+import com.niit.mvc.model.ModelSupport;
+import com.niit.pojo.CartRecord;
+import com.niit.pojo.User;
+
+public class LoginModel extends DispatchModel{
+	private String userName;
+	private String pwd;
+	private UserDao userDao;
+	private CartRecordDao cartRecordDao;
+	
+	public LoginModel(){
+		userDao = new UserDao();
+		cartRecordDao=new CartRecordDao();
+	}
+
+	@Override
+	public String execute() {
+		// TODO Auto-generated method stub
+		HttpServletRequest request = ModelSupport.getRequest();
+		HttpServletResponse response = ModelSupport.getResponse();
+		//查找用户
+		User user = userDao.findUserByUserName(userName);
+		if(user != null){
+			if(user.getUserPwd().equals(pwd)){
+				ModelSupport.getSession().setAttribute("loginUser", user);
+				if(request.getParameter("noLogin")!=null){
+					Cookie cookieName = new Cookie("userName",userName);
+					Cookie cookiePwd = new Cookie("pwd",pwd);
+					cookieName.setMaxAge(60*60*24*7);
+					cookiePwd.setMaxAge(60*60*24*7);
+					response.addCookie(cookieName);
+					response.addCookie(cookiePwd);
+				}
+				//雷春阳编写，以下：
+				System.out.println("开始查找用户的购物车");
+<<<<<<< .mine
+				List<CartRecord> cartRecordList=cartRecordDao.findCartListByUserId(3);
+=======
+				List<CartRecord> cartRecordList=cartRecordDao.findCartListByUserId(user.getUserId());
+>>>>>>> .r1814
+				System.out.println("用户购物车的大小："+cartRecordList.size());
+				ModelSupport.getSession().setAttribute("userCartRecordList", cartRecordList);
+				return "success";
+			}
+			else{
+				request.setAttribute("error", "密码错误！");
+				return "error";
+			}
+		}
+		else{
+			request.setAttribute("error", "用户名不存在!");
+			return "error";
+		}
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getPwd() {
+		return pwd;
+	}
+
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+
+	
+}

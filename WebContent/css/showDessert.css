@@ -1,0 +1,238 @@
+	/***********************************************分类选择层*****************************************************/
+	/*分类总容器*/
+	.ypp_TypeContainer{
+		width:1200px;
+		/*border:1px solid red;*/
+		margin:auto;
+		margin-top: 100px;
+	}
+	/*清除*/
+	.ypp_clear:after{
+		clear:both;
+		display: block;
+		content: "";
+	}
+	/*分类层*/
+	.ypp_TypeDiv1{
+		height: 60px;
+	}
+	/*分类、口味灰色字眼*/
+	.ypp_TypeDiv1{
+		font-size: 15px;
+		color:darkgrey;
+		line-height: 60px;
+		margin-left: 10px;
+		width:100px;
+		float: left;
+	}
+	/*分类总框的边框线*/
+	.ypp_kindContainer{
+		width: 1200px;
+		
+		
+	}
+	/*动态加载分类*/
+	.ypp_addType{
+		float: left;
+		text-align: center;
+		font-size: 13px;
+		
+	}
+	.ypp_addType a{
+		font-size: 13px;
+		float: left;
+		margin-right: 40px;
+		text-decoration: none;
+		margin-top: 20px;
+	}
+	.ypp_unKindSelected,.ypp_unTasteSelected{
+		color:#684029;
+	}
+	.ypp_unKindSelected:hover,.ypp_unTasteSelected:hover{
+		color:#C98889;
+	}
+	.ypp_kindSelected,.ypp_TasteSelected{
+		color:#C98889;
+	}
+
+	
+	/***********************************************具体分类呈现层*****************************************************/	
+	/*所有甜品展示*/
+	.ypp_AllTypeContainer{
+		width:1200px;
+		margin:auto;
+		margin-bottom:30px;
+		/*border:1px solid red;*/
+	}
+	/*每一大行甜品展示层*/
+	.ypp_AllTypeContainer1{
+		height: 320px;
+		width:228px;
+		/*border:1px solid black;*/
+		float: left;
+		margin-right: 70px;
+		text-align: center;
+		margin-top: 50px;
+		/*overflow: hidden;*/
+	}
+	/*提拉米苏、冰淇淋、慕斯、布丁名称层*/
+	.ypp_cake{
+		width:120px;
+		height: 40px;
+		font-size: 20px;
+		text-align: center;
+		line-height: 40px;
+		border-left:2px solid #684029;;
+		margin-bottom: 50px;
+		margin-top:50px;
+		
+		color:#684029;
+	}
+	/*每行甜品图片行*/
+	.ypp_DessertImg img{
+		width:228px;
+		height: 246px;
+		
+	}
+	.ypp_dessertInfo{
+		width:228px;	
+		padding-top:5px;
+	}
+	/*盗的lcy的样式——开始*/
+	.ypp_addSuccess_hidden{
+		width: 240x;
+		height: 90px;
+		position: relative;
+		top:-75px;
+		background-color:#957968;
+		padding-top: 10px;
+		display: none;
+	}
+	.ypp_hidden_top{
+		margin:auto;
+		line-height: 40px;
+		color:white;
+		font-size: 12px;
+	}
+	.ypp_hidden_top_icon{
+		width: 40px;
+		height: 40px;
+		background-image: url(../image/icon.png);
+		background-position: -265px -82px;
+		float: left;
+		margin-left: 35px;
+		transform: scale(0.7);
+	}
+	.ypp_hidden_top_text{
+		height: 35px;
+		float:left;
+		color:white;
+	}
+	.ypp_look_cart{
+		width:140px;
+		height: 30px;
+		margin: auto;
+		margin-top: 10px;
+		line-height: 30px;
+		text-align: center;
+		font-size: 12px;
+		color:#684029;
+		background-color: white;
+		cursor: pointer;
+	}
+	.ypp_look_cart:hover{
+		color:#BB9772;
+	}
+	/*盗的lcy的样式——结束*/
+	#ypp_loginNow{
+		background-color: #F8F8F8;
+		position:relative;
+		top:-90px;
+		display:none;
+	}
+	#ypp_loginNow div:nth-child(2) a{
+		display:inline-block;
+		float:left;
+		width:100px;
+		line-height:26px;
+		border:1px solid #684029;
+		margin:10px 5px 10px 5px;
+	}
+	.ypp_cancel{
+		color: #684029;
+	}
+	.ypp_confirm:active,.ypp_cancel:active{
+		position:relative;
+		top:1px;
+	}
+	.ypp_confirm{
+		background-color: #684029;
+		color:#F8F8F8;
+		text-decoration:none;
+	}
+	.ypp_confirm:hover{
+		background-color: #482618;
+		border-color: #482618;
+	}
+	#ypp_loginNow div:nth-child(1){
+		padding:10px 5px 0px 5px;
+		
+		line-height: 30px;
+	}
+	/*名称、价格、重量 （文字）*/
+	.ypp_price a{
+		font-size:13px;
+		margin-bottom: 5px;
+		text-decoration: none;
+	}
+	.ypp_price a:hover{
+		color:#BB9772;
+	}
+	
+	.ypp_priceWeight{
+		font-size:13px;
+		color:rosybrown;
+	}
+	
+	/*加入购物车层*/
+	.ypp_disableAddShoppingCart,.ypp_enableAddShoppingCart{
+		height: 35px;
+		text-align: center;
+		line-height: 35px;
+		text-decoration: none;
+	}
+	/*购物车（鼠标点击前）*/
+	.ypp_shoppingCar{
+		width:35px;
+		height: 35px;
+		line-height:35px;
+		display:inline-block;
+		transform: scale(0.5);
+		background-image:url(../image/icon.png);
+		background-position: -440px -90px;
+		margin-bottom:-12px;
+	}
+	.ypp_shoppingCar2{
+		text-decoration: none;
+		font-size: 12px;
+		color: #4F3637;
+		/*padding-top*/
+	}
+	/*加入购物车总框（图标+文字）*/
+	.ypp_AddShoppingParent{
+		width: 100px;
+		height: 35px;
+		margin: auto;
+	}
+	/*文字*/
+	.ypp_AddShopping{
+		text-align:center;
+		text-decoration: none;
+		font-size: 12px;
+		line-height: 35px;
+		color: #4F3637;
+		display:block;
+	}
+	.ypp_AddShopping:hover{
+		color:#BB9772;
+	}

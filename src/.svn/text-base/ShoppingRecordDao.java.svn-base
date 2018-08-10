@@ -1,0 +1,18 @@
+package com.niit.dao;
+
+import java.util.List;
+
+import com.niit.dao.util.DaoHandler;
+import com.niit.pojo.ShoppingRecord;
+
+
+public class ShoppingRecordDao {
+	/**
+	 * 通过订单编号找出购物记录（王飞）
+	 * @author admin
+	 *
+	 */
+	public List<ShoppingRecord> findShoppingRecordListByOrderId(int orderId){
+		return DaoHandler.executeQueryMultiple("select * from shoppingRecord_ where orderId = ?", new Object[]{orderId}, ShoppingRecord.class);
+	}
+}

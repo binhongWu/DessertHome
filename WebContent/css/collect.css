@@ -1,0 +1,121 @@
+*{
+	margin:0;
+}
+.clear:after{
+	content: "";
+	clear: both;
+	display: block;
+}
+.wf_container{
+	width: 1000px;
+	margin: auto;
+	margin-top: 80px;
+	padding-top: 10px;
+}
+.wf_topTitle{
+	width: 1000px;
+	height: 50px;
+	border: 1px solid #E1E1E1;
+	margin-bottom: 50px;
+}
+.wf_titleLeft{
+	width: 100px;
+	height: 50px;
+	float: left;
+}
+.wf_titleDessert{
+	width: 230px;
+	height: 50px;
+	float:left;
+	text-align: left;
+	line-height: 50px;
+	font-size: 20px;
+}
+.wf_titleRight{
+	width: 200px;
+	height: 50px;
+	float: left;
+	text-align: center;
+	line-height: 50px;
+	font-size: 20px;
+	margin-left:5px;
+}
+.wf_collectList{
+	width: 1000px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin-bottom: 20px;
+	border: 1px solid #E1E1E1;
+}
+.wf_collectInfo{
+	width: 900px;
+	height: 100px;
+	margin: auto;
+	margin-bottom: 30px;
+	border-bottom: 2px solid #E0E0E0;
+	float: left;
+	margin-left: 50px;
+}
+.wf_dessertImg{
+	width: 80px;
+	height: 80px;
+	float: left;
+}
+.wf_cakeImg{
+	width: 80px;
+	height: 80px;
+	border:1px solid #EFEFEF;
+}
+.wf_dessertInfo{
+	width: 200px;
+	height: 80px;
+	float: left;
+}
+.wf_dessertName{
+	height: 20px;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	color: #684029;
+}
+.wf_dessertWeight{
+	height: 15px;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	font-size: 12px;
+	color:#F0D5AF;
+}
+.wf_img{
+	width:35px;
+	height:35px;
+	margin-left:5px;
+	background-image:url(../image/icon.png);
+	background-size:310px 120px;
+	background-position:-44px -63px;
+	display: inline-block;
+}
+.wf_imgText{
+	font-size:12px;
+	color:#CECECE;
+}
+.wf_style{
+	width: 200px;
+	height: 80px;
+	text-align: center;
+	line-height: 80px;
+	float: left;
+	margin-left: 5px;
+}
+.wf_deleteDiv{
+	width: 46px;
+	height: 100px;
+	float: left;
+}
+.wf_deleteImg{
+	width: 25px;
+	height: 25px;
+	margin-top: 37px;
+	margin-left: 12px;
+	background-image:url(../image/icon.png);
+	background-position:-441px -140px;
+	cursor: pointer;
+}

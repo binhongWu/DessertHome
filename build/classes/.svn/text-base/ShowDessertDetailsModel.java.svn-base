@@ -1,0 +1,47 @@
+package com.niit.model;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import com.niit.dao.CollectionDao;
+import com.niit.dao.DessertDao;
+import com.niit.mvc.model.DispatchModel;
+import com.niit.mvc.model.ModelSupport;
+import com.niit.pojo.Collection;
+import com.niit.pojo.Dessert;
+import com.niit.pojo.User;
+
+public class ShowDessertDetailsModel extends DispatchModel{
+	private String dessertId;
+	private DessertDao dessertDao;
+	private CollectionDao collectionDao;
+	public String getDessertId() {
+		return dessertId;
+	}
+	public void setDessertId(String dessertId) {
+		this.dessertId = dessertId;
+	}
+	/**
+	 * 在构造中初始化Dao
+	 */
+	public ShowDessertDetailsModel(){
+		dessertDao=new DessertDao();
+		collectionDao=new CollectionDao();
+	}
+	@Override
+	public String execute() {
+		// TODO Auto-generated method stub
+		int flag=0;
+		HttpServletRequest request=ModelSupport.getRequest();
+		HttpSession session = ModelSupport.getSession();
+		Dessert dessert = dessertDao.findDessertByDessertId(Integer.parseInt(dessertId));
+		User user=(User)session.getAttribute("loginUser");
+		if(user!=null){
+			flag=collectionDao.checkIsCollect(user.getUserId(), Integer.parseInt(dessertId));
+		}
+		request.setAttribute("collectionFlag", flag);
+		request.setAttribute("dessert", dessert);
+		return "jump";
+	}
+	
+}

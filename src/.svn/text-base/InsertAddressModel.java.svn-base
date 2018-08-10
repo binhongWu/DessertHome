@@ -1,0 +1,49 @@
+package com.niit.model;
+
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import com.niit.bean.CartInfo;
+import com.niit.dao.AddressDao;
+import com.niit.dao.DessertDao;
+import com.niit.dao.ProvinceDao;
+import com.niit.mvc.model.DispatchModel;
+import com.niit.mvc.model.ModelSupport;
+import com.niit.mvc.model.TextModel;
+import com.niit.pojo.Address;
+import com.niit.pojo.CartRecord;
+import com.niit.pojo.Dessert;
+import com.niit.pojo.Province;
+import com.niit.pojo.User;
+
+public class InsertAddressModel extends TextModel{
+
+	//地址Dao
+	private AddressDao addressDao;
+	
+	@Override
+	public String execute() {
+		addressDao=new AddressDao();
+		HttpServletRequest request=ModelSupport.getRequest();
+		//省份
+		String provinceName=request.getParameter("province");
+		//城市
+		String cityName=request.getParameter("city");
+		//地区
+		String areaName=request.getParameter("area");
+		//详细地址
+		String addressTxt=request.getParameter("addressTxt");
+		
+		//获取登录用户
+		HttpSession session= ModelSupport.getSession();
+		User user=(User)session.getAttribute("loginUser");
+		//新增地址
+		String newAddress=provinceName+cityName+areaName+addressTxt;
+		System.out.println(newAddress);
+		addressDao.insertAddress(new Address(newAddress,user.getUserId()));
+		return newAddress;
+	}
+	
+	
+}

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mvc>
+	<!-- 业务模型 -->
+	<!-- 登录 -->
+	<model id="login">
+		<!-- 模型的类路径 -->
+		<model-class>com.wbh.model.LoginModel</model-class>
+		<!-- 跳转路径 -->
+		<model-forward>
+			<forward name="success">index.jsp</forward>
+			<forward name="error">WEB-INF/login.jsp</forward>
+		</model-forward>
+	</model>
+	<!-- 注册 -->
+	<model id="regist">
+		<model-class>com.wbh.model.RegistModel</model-class>
+		<!-- 跳转路径 -->
+		<model-forward>
+			<forward name="success">login.jsp</forward>
+			<forward name="error">WEB-INF/regist.jsp</forward>
+		</model-forward>
+	</model>
+	<!-- ajax验证登录 -->
+	<model id="loginAjax">
+		<model-class>com.wbh.model.LoginAjax</model-class>
+	</model>
+	<!-- ajax验证注册 -->
+	<model id="registAjax">
+		<model-class>com.wbh.model.RegistAjax</model-class>
+	</model>
+	<!-- ajax验证验证码 -->
+	<model id="codeAjax">
+		<model-class>com.wbh.model.CodeAjax</model-class>
+	</model>
+	<!-- 用户信息 -->
+	<model id="userInfo">
+		<model-class>com.wbh.model.UserInfoModel</model-class>
+		<model-forward>
+			<forward name="success">WEB-INF/userInfo.jsp</forward>
+		</model-forward>
+	</model>
+	<!-- 修改信息 -->
+	<model id="modifyInfo">
+		<model-class>com.wbh.model.ModifyInfoModel</model-class>
+		<model-forward>
+			<forward name="success">index.jsp</forward>
+		</model-forward>
+	</model>
+
+
+	<!-- 查看订单 -->
+	<model id="order">
+		<model-class>com.wbh.model.OrderModel</model-class>
+		<model-forward>
+			<forward name="success">WEB-INF/showOrder.jsp</forward>
+		</model-forward>
+	</model>
+	<!-- 删除订单 -->
+	<model id="deleteOrder">
+		<model-class>com.wbh.model.DeleteOrderAjax</model-class>
+		<model-forward>
+			<forward name="success">WEB-INF/ajaxPages/ajaxDeleteOrder.jsp</forward>
+			<forward name="noOrder">WEB-INF/ajaxPages/noOrder.jsp</forward>
+		</model-forward>
+	</model>
+	
+	<!-- 查看收藏列表 -->
+	<model id="showCollect">
+		<model-class>com.wbh.model.ShowCollectModel</model-class>
+		<model-forward>
+			<forward name="success">WEB-INF/showCollect.jsp</forward>
+		</model-forward>
+	</model>
+
+	<!-- 删除收藏列表 -->
+	<model id="deleteCollect">
+		<model-class>com.wbh.model.DeleteCollectAjax</model-class>
+		<model-forward>
+			<forward name="success">WEB-INF/ajaxPages/ajaxDeleteCollect.jsp</forward>
+			<forward name="noCollect">WEB-INF/ajaxPages/noCollection.jsp</forward>
+		</model-forward>
+	</model>
+	<!--展示甜品详情的模型-->
+	<model id="showDessertDetails">
+	<model-class>com.wbh.model.ShowDessertDetailsModel</model-class>
+	<model-forward>
+		<forward name="jump">WEB-INF/showDessertDetails.jsp</forward>
+	</model-forward>
+	</model>
+	<!-- 展示购物车的模型 -->
+	<model id="showCart">
+		<model-class>com.wbh.model.ShowCartModel</model-class>
+	<model-forward>
+		<forward name="showCart">WEB-INF/showCart.jsp</forward>
+	</model-forward>
+	</model>
+	<!-- 添加商品至购物车的模型 -->
+	<model id="addCartRecordAjax">
+	<!-- 模型的类路径 -->
+	<model-class>com.wbh.model.AddCartRecordAjax</model-class>
+	</model>
+	<!--展示购物车的ajax -->
+	<model id="showCartAjax">
+		<model-class>com.wbh.model.ShowCartAjax</model-class>
+		<model-forward>
+			<forward name="showCartAjax">WEB-INF/showCartRecordAjax.jsp</forward>
+		</model-forward>
+	</model>
+	<!--后台管理模型-->
+	<model id="backgroundManager">
+		<model-class>com.wbh.model.BackgroudManagerModel</model-class>
+		<model-forward>
+		 	<forward name="backgroundManager">WEB-INF/backgroundManager.jsp</forward>
+		</model-forward>
+	</model>
+	<!--添加收藏Ajax-->
+	<model id="addCollectionAjax">
+		<model-class>com.wbh.model.AddCollectionAjax</model-class>
+	</model>
+	<!-- 发布专题 -->
+	<model id="addSubject">
+		<model-class>com.wbh.model.AddSubjectModel</model-class>
+	<model-forward>
+		<forward name="success">WEB-INF/backgroundManager.jsp</forward>
+	</model-forward>
+	</model>
+	<!-- 添加新甜品 -->
+	<model id="addDessert">
+		<model-class>com.wbh.model.AddDessertModel</model-class>
+	<model-forward>
+		<forward name="success">WEB-INF/backgroundManager.jsp</forward>
+	</model-forward>
+	</model>
+	<!-- 用户管理 -->
+	<model id="search">
+		<model-class>com.wbh.model.UserManageModel</model-class>
+	<model-forward>
+		<forward name="success">WEB-INF/userManage.jsp</forward>
+	</model-forward>
+	</model>
+		<!-- 订单管理 -->
+	<model id="ordersearch">
+		<model-class>com.wbh.model.OrderManageModel</model-class>
+	<model-forward>
+		<forward name="success">WEB-INF/orderManage.jsp</forward>
+	</model-forward>
+	</model>
+	
+	<!-- 留言管理 -->
+	<model id="messageManage">
+		<model-class>com.wbh.model.MessageManageModel</model-class>
+	<model-forward>
+		<forward name="success">WEB-INF/messageManage.jsp</forward>
+	</model-forward>
+	</model>
+	<!-- 修改留言状态 -->
+	<model id="reviseMessage">
+		<model-class>com.wbh.model.ReciseMessageModel</model-class>
+	<model-forward>
+		<forward name="success">WEB-INF/reviseMessage.jsp</forward>
+	</model-forward>
+	</model>
+	<!-- 修改留言成功 -->
+	<model id="revisesuccess">
+		<model-class>com.wbh.model.ReviseSuccessModel</model-class>
+	<model-forward>
+		<forward name="success">WEB-INF/backgroundManager.jsp</forward>
+	</model-forward>
+	</model>
+	<!-- 用户搜索 ajax-->
+	<model id="userManageAjax">
+		<model-class>com.wbh.model.UserManageAjaxModel</model-class>
+	</model>
+	<!-- 订单搜索 ajax-->
+	<model id="orderManageAjax">
+		<model-class>com.wbh.model.OrderManageAjaxModel</model-class>
+	</model>
+	<!-- 添加甜品初始化-->
+	<model id="addDessertFirst">
+		<model-class>com.wbh.model.AddDessertFirst</model-class>
+	<model-forward>
+		<forward name="success">WEB-INF/addDessert.jsp</forward>
+	</model-forward>
+	</model>
+	<!-- 添加专题初始化-->
+	<model id="addSubjectFirst">
+		<model-class>com.wbh.model.AddSubjectFirstModel</model-class>
+	<model-forward>
+		<forward name="success">WEB-INF/addSubject.jsp</forward>
+	</model-forward>
+	</model>
+	<model id="showDessert">
+		<!--模型的类路径 -->
+		<model-class>com.wbh.model.ShowDessertModel</model-class>
+		<!--跳转路径 -->
+		<model-forward>
+			<forward name="showDessert">WEB-INF/showDessert.jsp</forward>
+			<forward name="ajaxShowDessert">WEB-INF/ajaxPages/ajaxShowDessert.jsp</forward>
+		</model-forward>
+	</model>
+	<model id="loginPrepare">
+		<!--模型的类路径 -->
+		<model-class>com.wbh.model.LoginPrepareModel</model-class>
+		<!--跳转路径 -->
+		<model-forward>
+			<forward name="success">WEB-INF/login.jsp</forward>
+		</model-forward>
+	</model>
+	<model id="registPrepare">
+		<!--模型的类路径 -->
+		<model-class>com.wbh.model.RegistPrepareModel</model-class>
+		<!--跳转路径 -->
+		<model-forward>
+			<forward name="success">WEB-INF/regist.jsp</forward>
+		</model-forward>
+	</model>
+	<model id="offline">
+		<!--模型的类路径 -->
+		<model-class>com.wbh.model.OfflineModel</model-class>
+		<!--跳转路径 -->
+		<model-forward>
+			<forward name="success">index.jsp</forward>
+		</model-forward>
+	</model>
+	<model id="showMessage">
+		<!--模型的类路径 -->
+		<model-class>com.wbh.model.ShowMessageModel</model-class>
+		<!--跳转路径 -->
+		<model-forward>
+			<forward name="showMessage">WEB-INF/showMessage.jsp</forward>
+			<forward name="ajaxShowMessage">WEB-INF/ajaxPages/ajaxShowMessage.jsp</forward>
+		</model-forward>
+	</model>
+	<model id="addMessageAjax">
+		<!--模型的类路径 -->
+		<model-class>com.wbh.model.AddMessageAjax</model-class>
+		<!--跳转路径 -->
+	</model>
+	<!-- 吴彬红   首页 -->
+	<model id="firstPage">
+		<model-class>com.wbh.model.FirstPageModel</model-class>
+		<model-forward>
+		<forward name="find">WEB-INF/firstPage.jsp</forward>
+		<forward name="notFind">index.jsp</forward>
+		<forward name="error">first.jsp</forward>
+	</model-forward>
+	</model>
+	<!--跳转路径 -->
+	<!-- 吴彬红   专题活动页 -->
+	<model id="showSubject">
+		<model-class>com.wbh.model.ShowSubjectModel</model-class>
+		<model-forward>
+		<forward name="find">WEB-INF/showSubject.jsp</forward>
+		<forward name="notFind">index.jsp</forward>
+	</model-forward>
+	</model>
+	<!-- 吴彬红   生成订单 -->
+	<model id="comfirmedOrder">
+		<model-class>com.wbh.model.ComfirmedOrderModel</model-class>
+		<model-forward>
+			<forward name="yes">WEB-INF/comfirmedOrder.jsp</forward>
+			<forward name="no">index.jsp</forward>
+		</model-forward>
+	</model>
+	<!-- 吴彬红   查找城市ajax -->
+	<model id="comfirmedOrderAjax">
+		<model-class>com.wbh.model.ComfirmedOrderAjax</model-class>
+	</model>
+	<!-- 吴彬红   查找地区ajax -->
+	<model id="comfirmedOrderAreaAjax">
+		<model-class>com.wbh.model.ComfirmedOrderAreaAjax</model-class>
+	</model>
+	<!-- 吴彬红   新增地址 -->
+	<model id="insertAddress">
+		<model-class>com.wbh.model.InsertAddressModel</model-class>
+	</model>
+	<!-- 吴彬红   添加订单 -->
+	<model id="addOrder">
+		<model-class>com.wbh.model.AddOrderModel</model-class>
+		<model-forward>
+			<forward name="addSuccess">WEB-INF/comfirmedOrder.jsp</forward>
+		</model-forward>
+	</model>
+</mvc>

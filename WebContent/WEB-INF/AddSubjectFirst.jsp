@@ -1,0 +1,1 @@
+<jsp:forward page="addSubjectFirst.do"></jsp:forward>

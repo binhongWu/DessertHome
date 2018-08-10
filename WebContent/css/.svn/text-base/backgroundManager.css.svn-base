@@ -1,0 +1,70 @@
+@CHARSET "UTF-8";
+.lcy_bodyStyle{
+			background-image: url(../image/timg.jpg);
+			background-repeat: no-repeat;
+			background-size: 100%;
+		}
+		.lcy_container{
+			width: 100%;
+			z-index: 1;
+		}
+		.lcy_borderBox{
+			width: 200px;
+			margin-left: 65%;
+			margin-top: 15%;
+		}
+		a{
+			text-decoration: none;
+			color:#ECDEDD;
+		}
+		
+		.lcy_li_style{
+			text-align: center;
+			list-style: none;
+			display: block;
+			margin-bottom: 3px;
+			font-size:15px;
+			background-color: #B689A6;
+			height: 40px;
+			line-height: 40px;
+			cursor: pointer;
+			transition: background-color 0.5s,color 0.5s;
+			border-radius: 3px;
+			
+			font-weight: bold;
+		}
+		.lcy_li_style:hover{
+			background-color:#D7BDC6;
+			box-shadow: 5px 5px 15px #B689A6;
+		}
+		.lcy_borderBox li:hover a{
+			color:#B689A6;
+		}
+		.lcy_sorry_tips{
+			background-image: url(../image/sorry.png);
+			width: 200px;
+			height: 200px;
+			background-size: cover;
+			position: absolute;
+			top: 30%;
+			left: 40%;
+			color:white;
+			
+		}
+		.lcy_sorry_text{
+			display:block;
+			position: relative;
+			top: 170px;
+			margin-left: 60px;
+			font-size: 12px;
+		}
+		.lcy_sorry_hidden{
+			width:100%;
+			height:100%;
+			position: absolute;
+			top:0px;
+			left:0px;
+			background-color: rgba(0,0,0,0.7);
+			z-index: 6;
+			display: none;
+		}

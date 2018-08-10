@@ -1,0 +1,67 @@
+package com.niit.model;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import com.niit.bean.CartInfo;
+import com.niit.dao.AddressDao;
+import com.niit.dao.AreaDao;
+import com.niit.dao.CityDao;
+import com.niit.dao.DessertDao;
+import com.niit.dao.ProvinceDao;
+import com.niit.mvc.model.DispatchModel;
+import com.niit.mvc.model.ModelSupport;
+import com.niit.pojo.Address;
+import com.niit.pojo.Area;
+import com.niit.pojo.CartRecord;
+import com.niit.pojo.City;
+import com.niit.pojo.Dessert;
+import com.niit.pojo.Province;
+import com.niit.pojo.User;
+
+public class ComfirmedOrderModel extends DispatchModel{
+	private DessertDao dessertDao;
+	private AddressDao addressDao;
+	private ProvinceDao provinceDao;
+
+	@Override
+	public String execute() {
+		dessertDao=new DessertDao();
+		addressDao=new AddressDao();
+		provinceDao=new ProvinceDao();
+		
+		double goodsTotalPrice=0;
+		HttpServletRequest request=ModelSupport.getRequest();
+		HttpSession session= ModelSupport.getSession();
+		//初始化一个CartInfo列表
+		List<CartInfo> cartInfoList=new ArrayList<CartInfo>();
+		List<CartRecord> cartRecordList=(List<CartRecord>)session.getAttribute("userCartRecordList");
+		System.out.println("购物数据："+cartRecordList.size()+"条");
+		//当前登录用户对象
+		User user=(User)session.getAttribute("loginUser");
+		//根据用户编号查找地址
+		List<Address> addressList=addressDao.findAddressByUserId(user.getUserId());
+		//查找所有省份
+		List<Province> proList=provinceDao.findAllProvince();
+		
+		//循环遍历，向列表中写入数据
+		for(CartRecord cartRecord:cartRecordList){
+			Dessert dessert=dessertDao.findDessertByDessertId(cartRecord.getDessertId());
+			goodsTotalPrice+=dessert.getDessertPrice()*cartRecord.getDessertNumber();
+			cartInfoList.add(new CartInfo(dessert, cartRecord.getDessertNumber(),dessert.getDessertPrice()*cartRecord.getDessertNumber()));
+		}
+		//将封装好的数据写入请求
+		request.setAttribute("user", user);
+		request.setAttribute("addressInfo", addressList);
+		request.setAttribute("userCartInfoList", cartInfoList);
+		request.setAttribute("goodsTotalPrice", goodsTotalPrice);
+		request.setAttribute("proList", proList);		
+		return "yes";
+	}
+	
+}

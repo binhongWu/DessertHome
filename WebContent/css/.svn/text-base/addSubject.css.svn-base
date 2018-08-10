@@ -1,0 +1,43 @@
+.wwxdiv1 {
+	width: 550px;
+	height: 80px;
+	font-size: 25px;
+	text-align: center;
+	line-height: 80px;
+	margin: auto;
+	background-color: #EDB2B3
+}
+
+#wwxdessertform2 {
+	background-color: #E9E0E0;
+	width: 550px;
+	margin: auto;
+}
+
+.wwxdesserContent {
+	text-indent: 36px;
+	width: 300px;
+	height: 150px;
+	background-color: white;
+	color: black;
+	line-height: 15px;
+	overflow: auto;
+	border: 1px solid gray;
+	resize:none;
+}
+
+.wwxbtn {
+	width: 120px;
+	height: 30px;
+	position: relative;
+	left: 320px;
+}
+
+.wwxspan {
+	color: red
+}
+.container{
+		padding-top:100px;
+		padding-bottom: 178px;
+		background-image: url(../image/5020152cde44177b2945f16a7e887ec5.PNG);
+	}

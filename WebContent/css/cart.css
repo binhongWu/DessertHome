@@ -1,0 +1,268 @@
+@CHARSET "UTF-8";
+	*{
+			padding:0;margin:0;border:none;text-decoration:none;
+			
+		}
+		.clear:after{
+			content:"";
+			display: block;
+			clear: both;
+			
+		}
+		.lcy_container{
+			width: 1200px;
+			margin: auto;
+		}
+		.lcy_title_container{
+			width: 1200px;
+			height: 35px;
+			border: #E1E1E1 solid 1px;
+			color:#684029;
+			line-height: 35px;
+			background-color: #FAFAFA;
+			margin-top: 100px;
+		}
+		.lcy_goodsName{
+			float: left;
+			width: 350px;
+		}
+		.lcy_goodsPrice{
+			float: left;
+			width: 200px;
+		}
+		.lcy_goodsNum{
+			float: left;
+			width: 200px;
+		}
+		.lcy_TotalPriceOfOneGoods{
+			float: left;
+			width: 200px;
+		}
+		.lcy_goodsList_container{
+			margin-top: 50px;
+			width: 1200px;
+			border: #E1E1E1 solid 1px;
+		}
+		.lcy_goodsInfo_block{
+			width:1150px;
+			margin-left: 50px;
+			height: 110px;
+			margin-bottom: 30px;
+			margin-top: 30px;
+		}
+		.lcy_goodsInfo_container{
+			border-bottom: 2px solid #E0E0E0;
+			width: 1100px;
+			height: 110px;
+			float:left;
+		}
+		.lcy_deleteGoods_btn_container{
+			float: left;
+			width: 50px;
+			height: 90px;
+		}
+		.lcy_delectGoods_btn{
+			width:22px;
+			height: 22px;
+			background-image: url(../image/icon.png);
+			background-position: -440px -140px;
+			transform: scale(0.6);    
+			cursor: pointer;
+			margin:auto;
+			position:relative;
+			top:35px;
+		}
+		.lcy_delectGoods_btn:hover{
+			background-position: -440px -166px;
+		}
+		.lcy_goodsInfo_details{
+			width:500px;
+			height: 110px;
+			float: left;
+		}
+		.lcy_goodsNumInfo{
+			width: 200px;
+			float: left;
+			height: 70px;
+			padding-top:40px;
+		}
+		.lcy_goodsPriceInfo{
+			float: left;
+			width: 200px;
+			height: 110px;
+			color:#684029;
+			line-height: 110px;
+		}
+		.lcy_totalPriceOfOneGoodsInfo{
+			float:left;
+			width: 200px;
+			height: 110px;
+			color:#684029;
+			color: #FF714D;
+			line-height: 110px;
+			font-size: 13px;
+		}
+		.lcy_goodsInfoDeatils_Img{
+			float: left;
+			border: 1px solid #EFEFEF;
+			width: 80px;
+			height: 80px;
+		}
+		.lcy_goodsInfoDeatils_Text{
+			float: left;
+			line-height: 23px;
+			font-size: 12px;
+			color: #CECECE;
+		}
+		.lcy_goodsInfoDeatils_Text_Title a{
+			text-decoration: none;
+			font-size: 15px;
+			color:#684029;
+			margin-left: 20px;
+		}
+		.lcy_goodsInfoDeatils_Text_Title a:hover{
+			color:#D5BFA7;
+		}
+		.lcy_goodsInfoDeatils_Text_Weight{
+			color:#D5BFA7;
+			font-size: 12px;
+			margin-left: 20px;
+		}
+		.lcy_goodsInfoDeatils_Text_Tips{
+			width:35px;
+			height:35px;
+			margin-left: 20px;
+			margin-right: 5px;
+			margin-bottom: -6px;
+			background-image: url(../image/icon.png);
+			background-size: 310px 120px;
+			background-position: -44px -63px;
+			display: inline-block;
+		}
+		.lcy_reduce_btn{
+			border:none;
+			width: 22px;
+			height: 22px;
+			background-image: url(../image/icon.png);
+			background-position: -252px -96px;
+			background-size: 310px 120px;
+			background-color: white;
+			border:1px solid #E7E7E7;
+			outline: none;
+			cursor: pointer;
+		}
+		.lcy_showGoodsNum_text{
+			width: 100px;
+			height:22px;
+			background: #ffffff;
+			outline: none;
+			text-align: center;
+			border: none;
+			position: relative;
+			top: -5px;
+			border-top:1px solid #E7E7E7;
+			border-bottom:1px solid #E7E7E7;
+		}
+		.lcy_plus_btn{
+			width: 22px;
+			height: 22px;
+			background-image: url(../image/icon.png);
+			background-position: -235px -100px;
+			background-size: 310px 120px;
+			border:1px solid #E7E7E7;
+			background-color: white;
+			outline: none;
+			cursor: pointer;
+		}
+		.lcy_shoppingInfo_container{
+			width:1090px;
+			height: 260px;
+			margin-top: 20px;
+			border: #E1E1E1 solid 1px;
+			background-color: #FBFBFB;
+			padding: 30px 60px 30px 50px;
+		}
+		.lcy_shoppingInfo_Line{
+			width: 1120px;
+			height: 40px;
+			line-height: 40px;
+			font-size: 12px;
+			text-align: right;
+			color: #684029;
+		}
+		.lcy_deleteAll_container{
+			width:120px;
+			height: 28px;
+			float: left;
+			cursor:pointer;
+		}
+		.lcy_deleteAll_btn_Img{
+			display: inline-block;
+			width: 18px;
+			height: 21px;
+			background-position: -148px -71px;
+    		background-size: 310px 120px;
+			background-image: url(../image/icon.png);
+			margin-right: 18px;
+    		margin-bottom: -4px;
+		}
+		.lcy_deleteAll_container{
+			color:#684029;
+			
+		}
+		.lcy_deleteAll_container:hover{
+			color:#EBBF87;
+		}
+		.lcy_PayMoney_Line{
+			display: inline-block;
+			width:150px;
+			border-top: solid #E2E2E2 1px;
+		}
+		.lcy_fullCut{
+			color:#FBDEB9;
+		}
+		.lcy_money{
+			color:#FE7173;
+		}
+		.lcy_payMoney{
+			width:240px;
+			height: 40px;
+			text-align: center;
+			font-size: 13px;
+			color:white;
+			background-color: #684029;
+			display: inline-block;
+			cursor: pointer;
+			line-height: 40px;
+		}
+		.lcy_payMoney:hover{
+			background-color: #442818;
+		}
+			.lcy_emptyCart{
+		width: 1200px;
+		height: 600px;
+		padding-top: 200px;
+	}
+	.lcy_textTips{
+		color:#D5BFA7;
+		text-align: center;
+		font-size: 12px;
+	}
+	.lcy_CartImgBox img{
+		display: block;
+		height: 116px;
+		width: 204px;
+		margin: 0 auto;
+	}
+	.lcy_goShopping{
+		margin-top: 50px;
+		font-size: 13px;
+		text-align: center;
+	}
+	.lcy_goShopping a{
+		text-decoration: none;
+		color: #633D27;
+	}
+	.lcy_goShopping a:hover{
+		color:#FFD89E;
+	}

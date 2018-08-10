@@ -1,0 +1,141 @@
+*{
+	margin:0;
+}
+.clear:after{
+	content: "";
+	clear: both;
+	display: block;
+}
+.wf_container{
+	width: 800px;
+	margin: auto;
+	margin-top: 80px;
+	padding-top:20px;
+}
+.wf_orderBox{
+	width: 800px;
+	margin-bottom: 20px;
+	padding-bottom: 30px;
+	border: 1px solid lightgrey;
+	box-shadow: 3px 3px 5px black;
+}
+.wf_orderTop{
+	width: 700px;
+	height: 50px;
+	margin: auto;
+	margin-top: 20px;
+	border-bottom: 2px solid #E0E0E0;
+}
+.wf_orderIdBox{
+	width: 350px;
+	height: 50px;
+	text-align: left;
+	line-height: 50px;
+	font-size: 16px;
+	color: #684029;
+	float: left;
+}
+.wf_orderFlagBox{
+	width: 350px;
+	height: 50px;
+	text-align: right;
+	line-height:50px;
+	font-size:16px;
+	color: red;
+	float:left;
+}
+.wf_dessertBox{
+	width: 700px;
+	height: 100px;
+	margin: auto;
+	margin-top: 20px;
+	border-bottom: 1px dashed red;
+}
+.wf_dessertImg{
+	width: 80px;
+	height: 80px;
+	float: left;
+}
+.wf_cakeImg{
+	width: 80px;
+	height: 80px;
+	border:1px solid #EFEFEF;
+}
+.wf_dessertInfo{
+	width: 260px;
+	height: 80px;
+	float: left;
+}
+.wf_dessertName{
+	height: 20px;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	color: #684029;
+}
+.wf_dessertWeight{
+	height: 15px;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	font-size: 12px;
+	color:#F0D5AF;
+}
+.wf_img{
+	width:35px;
+	height:35px;
+	margin-left:5px;
+	background-image:url(../image/icon.png);
+	background-size:310px 120px;
+	background-position:-44px -63px;
+	display: inline-block;
+}
+.wf_imgText{
+	font-size:12px;
+	color:#CECECE;
+}
+.wf_orderRight{
+	width: 300px;
+	height: 80px;
+	float: left;
+}
+.wf_priceBox{
+	height: 40px;
+	text-align: right;
+	color: red;
+	font-size: 18px;
+	line-height: 50px;
+}
+.wf_countBox{
+	text-align: right;
+	font-size:15px;
+}
+.wf_totalPrice{
+	width: 700px;
+	height: 30px;
+	margin-top: 10px;
+	text-align: right;
+	line-height: 30px;
+	font-size: 15px;
+	color: red;
+}
+.wf_orderTime{
+	width: 700px;
+	height: 30px;
+	text-align: left;
+	line-height: 30px;
+	font-size: 15px;
+}
+.wf_toPay{
+	text-decoration: none;
+	line-height: 50px;
+	margin-left: 10px;
+}
+.wf_deleteOrder{
+	width: 70px;
+	height: 30px;
+	float: right;
+	border: 1px solid grey;
+	color: grey;
+	text-align: center;
+	border-radius: 10px;
+	cursor: pointer;
+}

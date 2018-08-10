@@ -1,0 +1,31 @@
+package com.niit.model;
+
+import com.niit.dao.UserDao;
+import com.niit.mvc.model.TextModel;
+import com.niit.pojo.User;
+
+public class OrderManageAjaxModel extends TextModel{
+	private String ordername;
+	
+	public String getOrdername() {
+		return ordername;
+	}
+
+	public void setOrdername(String ordername) {
+		this.ordername = ordername;
+	}
+
+	@Override
+	public String execute() {
+		// TODO Auto-generated method stub
+		UserDao userdao=new UserDao();
+		User user = userdao.findUserByUserName(ordername);
+		if(user != null){
+			return "";
+		}
+		else{
+			return "用户名不存在！";
+		}
+	}
+	
+}

@@ -1,0 +1,281 @@
+@CHARSET "UTF-8";
+*{
+			margin:0;
+		}
+		.clear:after{
+			display:block;
+			content: "";
+			clear: both;
+		}
+		.lcy_container{
+			width: 1200px;
+			margin: auto;
+			margin-top:80px;
+			margin-bottom:30px;
+		}
+		.lcy_dessert_Info_container{
+			width: 1200px;
+		}
+		.lcy_left_Info_container{
+			float:left;
+			width: 600px;
+			height: 500px;
+		}
+		.lcy_dessert_Title_Box{
+			height: 250px;
+			border-bottom: 2px solid #CECAC7;
+		}
+		.lcy_dessert_Name{
+			font-size:25px;
+			color:#684029;
+			font-weight: bold;
+		}
+		.lcy_dessert_Detail{
+			font-size: 12px;
+			color:#684029;
+			width: 500px;
+			word-break: break-all;
+			text-align: justify;
+		}
+		.lcy_dessert_Tips_Box{
+			width:600px;
+			height: 250px;
+			border-bottom: 2px solid #CECAC7;
+			color: #7F5E4A;
+		}
+		.lcy_shopping_Tips{
+			height: 100px;
+		}
+		.lcy_dispatching_img{
+			background-image: url(../image/icon.png);
+			width: 60px;
+			height: 60px;
+			background-position: -240px 0px ;
+			float: left;
+			margin-top: 10px;
+		}
+		.lcy_dispatching_text{
+			line-height: 100px;
+			float: left;
+		}
+		.lcy_keepfresh_img{
+			background-image: url(../image/icon.png);
+			width: 60px;
+			height: 60px;
+			background-position: -300px 0px ;
+			float: left;
+			margin-top: 20px;
+		}
+		.lcy_keepfresh_text{
+			line-height: 100px;
+			float: left;
+		}
+		.lcy_right_Info_container{
+			float:left;
+			width: 500px;
+			height: 500px;
+			margin-left: 100px;
+			border-bottom: 2px solid #CECAC7;
+		}
+		.lcy_goodstips_box{
+			margin-top: 80px;
+			width: 500px;
+			height: 40px;
+		}
+		.lcy_goodstips_img{
+			width:40px;
+			height: 40px;
+			float: left;
+			transform: scale(0.5);
+		}
+		.lcy_goodstips_text{
+			height: 40px;
+			float: left;
+			line-height: 40px;
+			color: #C5B098;
+			font-size: 8px;
+		}
+		.lcy_goodstips_1{
+			float: left;
+		}
+		.lcy_goodstips_img1{
+			background-image: url(../image/icon.png);
+			background-position: -430px -10px;
+		}
+		.lcy_goodstips_2{
+			float: left;
+		}
+		.lcy_goodstips_img2{
+			background-image: url(../image/icon.png);
+			background-position: -475px -10px;
+		}
+		.lcy_goodstips_3{
+			float: left;
+		}
+		.lcy_goodstips_img3{
+			background-image: url(../image/icon.png);
+			background-position: -525px -10px;
+		}
+		.lcy_goodstips_4{
+			float: left;
+		}
+		.lcy_goodstips_img4{
+			background-image: url(../image/icon.png);
+			background-position: -574px -10px;
+		}
+		.lcy_goods_info{
+			margin-top:50px;
+			margin-left: 10px;
+			height: 40px;
+			line-height: 40px;
+			color:#C5B098;
+			font-size: 13px;
+		}
+		.lcy_buy_btn_box{
+			height: 30px;
+			margin-top: 60px;
+		}
+		.lcy_btn_style{
+			width:240px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			float: left;
+			cursor: pointer;
+		}
+		.lcy_btn_buyNow{
+			background-color: #F4F4F4;
+			color: #7A5844;
+			margin-right: 20px;
+		}
+		.lcy_btn_buyNow1{
+			background-color: #F4F4F4;
+			color: #7A5844;
+			margin-right: 20px;
+		}
+		.lcy_btn_addCart{
+			background-color: #684029;
+			color:white;
+		}
+		.lcy_btn_addCart1{
+			background-color: #684029;
+			color:white;
+		}
+		.lcy_btn_buyNow:hover{
+			background-color:#EFEFEF;
+		}
+		.lcy_btn_addCart:hover{
+			background-color:#482618;
+		}
+		.lcy_addSuccess_hidden{
+			width: 240px;
+			height: 120px;
+			position: relative;
+			top:-150px;
+			left:260px;
+			background-color:#957968;
+			padding-top: 20px;
+			display: none;
+		}
+		.lcy_hidden_top{
+			margin:auto;
+			line-height: 40px;
+			color:white;
+			font-size: 12px;
+		}
+		.lcy_hidden_top_icon{
+			width: 40px;
+			height: 40px;
+			background-image: url(../image/icon.png);
+			background-position: -265px -82px;
+			float: left;
+			margin-left: 35px;
+			transform: scale(0.7);
+		}
+		.lcy_hidden_top_text{
+			height: 40px;
+			float:left;
+		}
+		.lcy_look_cart{
+			width:160px;
+			height: 38px;
+			margin: auto;
+			margin-top: 10px;
+			line-height: 38px;
+			text-align: center;
+			font-size: 12px;
+			color:#684029;
+			background-color: white;
+			cursor: pointer;
+		}
+		.lcy_look_cart:hover{
+			color:#BB9772;
+		}
+		/*追加的样式表*/
+		.lcy_loginTips{
+			text-align:center;
+			font-size: 16px;
+			margin-top: 20px;
+			color:white;
+		}
+		.lcy_loginNow{
+			display:inline-block;
+			width: 60px;
+			height: 30px;
+			margin-top: 20px;
+			margin-right: 40px;
+			margin-left: 40px;
+			background-color: bisque;
+			text-align: center;
+			color:#957968;
+			line-height: 30px;
+			border-radius: 5px;
+			transition: background-color 0.5s,color 0.5s;
+			cursor: pointer;
+		}
+		.lcy_cancle{
+			display:inline-block;
+			width: 60px;
+			height: 30px;
+			margin-top: 20px;
+			background-color: bisque;
+			text-align: center;
+			color:#957968;
+			line-height: 30px;
+			border-radius: 5px;
+			transition: background-color 0.5s,color 0.5s;
+			cursor: pointer;
+		}
+		.lcy_loginNow:hover{
+			background-color: #482618;
+			color:white;
+		}
+		.lcy_cancle:hover{
+			background-color: #482618;
+			color:white;
+		}
+		/*追加收藏按钮*/
+		.lcy_collection_btn{
+			width:50px;
+			height:50px;
+			float: right;
+			border: 1px solid grey;
+			border-radius: 50%;
+			cursor: pointer;
+			margin-bottom:20px;
+			
+		}
+		
+		.lcy_c_hidden_login_tips{
+			position:relative;
+			top:20px;
+			left:200px;
+			height:20px;
+		}
+		.lcy_c_hidden_login_text{
+			display:none;
+		}
+		.lcy_c_hidden_login_tips a{
+			text-decoration:none;
+			color:red;
+		}

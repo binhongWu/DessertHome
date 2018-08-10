@@ -1,0 +1,99 @@
+package com.wbh.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import com.wbh.mvc.model.ModelSupport;
+import com.wbh.mvc.model.TextModel;
+import com.wbh.pojo.CartRecord;
+import com.wbh.pojo.User;
+
+public class AddCartRecordAjax extends TextModel{
+	private String dessertId;
+	
+	public String getDessertId() {
+		return dessertId;
+	}
+
+	public void setDessertId(String dessertId) {
+		this.dessertId = dessertId;
+	}
+
+	/**
+	 * 对添加购物车的方法进行逻辑判断
+	 */
+	@Override
+	public String execute() {
+		//设置标示，判断该甜点是否已存在在购物车中
+		int isExist=0;
+		//用于接收甜品的数量
+		int dessertNum=0;
+		//用于接收该甜品在列表中的索引
+		int index=-1;
+		//用于接收传过来的甜品Id
+		int dessertId=Integer.parseInt(this.dessertId);
+		// TODO Auto-generated method stub
+		HttpServletRequest request=ModelSupport.getRequest();
+		HttpSession session=ModelSupport.getSession();
+		//获取到该用户购物车中的所有数据
+		List<CartRecord> userCartRecordList=(List<CartRecord>)session.getAttribute("userCartRecordList");
+		//判断传过来的dessertId的值采取不同的操作
+		if(dessertId>0){
+			//Id值大于0
+			//若该用户购物车中没有数据，则直接添加
+			if(userCartRecordList.size()==0){
+				userCartRecordList.add(new CartRecord(dessertId, 1, ((User)session.getAttribute("loginUser")).getUserId()));
+				return "成功加入购物车！";
+			}else{
+				//对购物车进行遍历，判断商品是否存在
+				for(int i=0;i<userCartRecordList.size();i++){
+					if(dessertId==userCartRecordList.get(i).getDessertId()){
+						dessertNum=userCartRecordList.get(i).getDessertNumber();
+						index=i;
+						isExist=1;
+						break;
+					}
+				}
+				//商品不存在，则添加商品
+				if(isExist==0){
+					userCartRecordList.add(new CartRecord(dessertId, 1, ((User)session.getAttribute("loginUser")).getUserId()));
+					
+					return "成功加入购物车！";
+				}
+				else{
+					//商品存在，则判断商品数量是否超过最大值
+					if(dessertNum<99){
+						//更改商品数量
+						userCartRecordList.get(index).setDessertNumber(dessertNum+1);
+						return "成功加入购物车！";
+					}
+					else{
+						return "商品数量超过上限！";
+					}
+				}
+			}
+		}else{
+			int id=0;
+			int num=0;
+			//传过来的值小于0，则对原session中的数据进行覆盖
+			userCartRecordList=new ArrayList<CartRecord>();
+			String[] idArray=request.getParameter("dessertIdList").toString().split("A");
+			String[] numArray=request.getParameter("numList").toString().split("A");
+			for(int i=0;i<idArray.length;i++){
+				id=Integer.parseInt(idArray[i]);
+				num=Integer.parseInt(numArray[i]);
+				userCartRecordList.add(new CartRecord(id, num, ((User)session.getAttribute("loginUser")).getUserId()));
+			}
+			System.out.println("mmpaansndkjnaskdbsfbkjsadf");
+			session.setAttribute("userCartRecordList", userCartRecordList);
+			List<CartRecord> list=userCartRecordList;
+			return "";
+		}
+		
+	}
+	
+	
+}

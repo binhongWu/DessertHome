@@ -1,0 +1,38 @@
+package com.wbh.pojo;
+
+public class Address {
+	//地址 Id
+	private int addressId;
+	//地址 
+	private String addressDetail;
+	//用户id
+	private int userId;
+	
+	//空参构造
+	public Address(){}
+	//带参构造
+	public Address(String addressDetail, int userId) {
+		super();
+		this.addressDetail = addressDetail;
+		this.userId = userId;
+	}
+	public int getAddressId() {
+		return addressId;
+	}
+	public void setAddressId(int addressId) {
+		this.addressId = addressId;
+	}
+	public String getAddressDetail() {
+		return addressDetail;
+	}
+	public void setAddressDetail(String addressDetail) {
+		this.addressDetail = addressDetail;
+	}
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+	
+}

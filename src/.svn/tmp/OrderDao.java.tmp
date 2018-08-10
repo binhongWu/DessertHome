@@ -1,0 +1,38 @@
+package com.niit.dao;
+
+import java.util.List;
+import java.util.List;
+
+import com.niit.dao.util.DaoHandler;
+import com.niit.pojo.Order;
+
+public class OrderDao {
+	/**
+	 * 查找所有订单
+	 */
+
+	public void insertOrder(Order order){
+		 DaoHandler.executeUpdate("insert into order_ values(seq_orderid.nextval,?,?,?,?)", new Object[]{order.getOrderFlag(),order.getUserId(),order.getAddressId(),order.getOrderTime()});
+	}
+
+	public List<Order> findAllOrder(){
+		return DaoHandler.executeQueryMultiple("select *from order_", new Object[]{}, Order.class);
+	}
+<<<<<<< .mine
+	
+//	public List<Order> selectCartInfo(){
+//		
+//		return null;
+//	}
+		
+}
+=======
+	/**
+	 * 通过用户编号查找用户订单
+	 * @param userId
+	 * @return
+	 */
+	public List<Order> findOrderByUserId(int userId){
+		return DaoHandler.executeQueryMultiple("select * from order_ where userId = ?", new Object[]{userId}, Order.class);
+	}
+}>>>>>>> .r1244

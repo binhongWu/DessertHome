@@ -1,0 +1,124 @@
+	#wwxta1 td{
+  		width: 120px;
+  		height: 30px;
+  		
+  		line-height: 30px;
+  	}
+  	.wwx_div{
+  		width: 985px;
+		height: 624px;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		
+  	}
+  	.wwx_div2{
+  		margin-left: 400px;
+		position: relative;
+		top: -19px;
+		width: 600px;
+		background-color:#F6F7EE;
+		border: 1px solid #E9E9E9;
+		box-shadow: 3px 3px 5px grey;
+  	}
+  	.clear:after{
+  		clear: both;
+  		display: block;
+  		content: "";
+  	}
+  	.wwx_div5{
+  		height: 80px;
+  		width: 600px;
+  		font-size: 25px;
+  		line-height: 80px;
+  		border: 1px solid #E9E9E9;
+  		border-right:none;
+  		margin-bottom: 20px
+  	}
+  	.wwxdiv222{
+  		width: 40px;
+  		float: left;
+  		height: 50px;
+  		line-height: 50px;
+  		 position: relative;
+  		 left: 150px;
+  		 display: block;
+  		 margin-left: 10px;
+  	}
+  	.wwxdivmessagecontent{
+  		float: left;
+  		position: relative;
+  		left: 66px;
+  	}
+  	.wwxdivmessagecontent1{
+  		float:left;
+  		width: 300px;
+  		height: 80px;
+  		border: 1px solid gray;
+  		text-indent: 24px;
+  		text-align: left;
+  		position: relative;
+  		left: 80px
+  	}
+  	.wwxdivmessagecontent2{
+  		float: left;
+  		 position: relative;
+  		 left: 130px;
+  		 top: 20px;
+  	}
+  	.wwxtd1{
+  		font-size: 12px;
+  		line-height: 15px;
+  	}
+  	.wwxtd2{
+  		position: relative;
+  		bottom:-8px;
+  		right: -70px;
+  	}
+  	.wwxtd3{
+  		position: relative;
+  		bottom:-6px;
+  		right:-100px;
+  		width: 235px;
+  		
+  	}
+  	.wwxtd4{
+  		border: 1px solid gray;
+  		margin-left: 5px;
+  		width: 30px;
+  		background-color: #AE5638;
+  		font-size: 13px;
+  		
+  	}
+  	#wwxtr1 a{
+  		text-decoration: none;
+  		color: #746F6F;
+  	}
+  	.wwxtd5{
+  		border: 1px solid gray;
+  		margin-left: 5px;
+  		width: 20px;
+  		font-size: 13px;
+  		
+  	}
+  	.wwxtd6{
+  		color: #746F6F ;
+  		font-size: 13px;
+  		position: relative;
+  		bottom: -8px;
+  	}
+  	.wwxtd9{
+  		color: #746F6F ;
+  		font-size: 13px;
+  		position: relative;
+  	}
+  	.wwxtd7{
+  		color: red;
+  		font-size: 13px;
+  		width:220px;
+  	}
+  	.container{
+		padding-top:100px;
+		padding-bottom: 260px;
+		background-repeat: no-repeat;
+		background-image: url(../image/5020152cde44177b2945f16a7e887ec5.PNG);
+	}

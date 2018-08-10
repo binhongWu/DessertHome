@@ -1,0 +1,1 @@
+<jsp:forward page="messageManage.do"></jsp:forward>

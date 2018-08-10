@@ -1,0 +1,59 @@
+package com.niit.model;
+
+import java.util.Date;
+
+import javax.servlet.http.HttpSession;
+
+
+import com.niit.dao.UserDao;
+import com.niit.mvc.model.DispatchModel;
+import com.niit.mvc.model.ModelSupport;
+import com.niit.pojo.User;
+
+public class RegistModel extends DispatchModel{
+	private UserDao userDao;
+	private String userName;
+	private String pwd;
+	private String sex;
+	public RegistModel(){
+		userDao = new UserDao();
+	}
+
+	@Override
+	public String execute() {
+		// TODO Auto-generated method stub
+		User user=new User(userName,pwd,Integer.parseInt(sex),new Date());
+		userDao.addUser(user);
+		HttpSession session=ModelSupport.getSession();
+		session.setAttribute("loginUser", user);
+		return "success";
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getPwd() {
+		return pwd;
+	}
+
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+
+	public String getSex() {
+		return sex;
+	}
+
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+	
+	
+	
+	
+}

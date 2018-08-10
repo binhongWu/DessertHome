@@ -1,0 +1,140 @@
+@CHARSET "UTF-8";
+	.ypp_CommentBody{
+		background-image: url(../image/ypp_bg.JPG);
+	}
+	.ypp_comment{
+		width:100%;
+		margin: auto;	
+	}
+	#ypp_commentContainer{
+		text-align: center;
+		padding: 20px 300px 20px 300px;
+	}
+	.ypp_commentTitle{
+		width:750px;		
+	}
+	.ypp_commentSpan1{
+		color:#66423A;
+		font-family: "幼圆";
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 80px;
+	}
+	.ypp_commentSpan2{
+		font-family: "隶书";
+		font-size: 17px;
+		color:#B780B9;
+	}
+	.ypp_commentHr{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(144,84,163, 0), rgba(144,84,163, 0.75), rgba(144,84,163, 0));
+	}
+	.ypp_content{
+		width: 620px;
+		position: relative;
+		left: 30px;
+		background-color: #B1BDCD;
+		border-radius: 12px;
+		padding: 20px;
+		margin-top: 10px;
+		word-wrap: break-word;
+		font-size:14px;
+		line-height: 30px;
+		color:#962735;
+		box-shadow: 3px 3px 3px #EAF0EE;
+		letter-spacing: 1px;
+		text-align: left;text-indent: 30px;
+	}
+
+	.ypp_content:hover{
+		box-shadow: 3px 3px 10px #D8DEE6 inset;
+	}
+
+	.ypp_content:after{
+		content: "\00a0";
+		display: block;
+		position:absolute;
+		top:15px;
+		left: -20px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 10px 20px 10px 0px;
+		border-color: transparent #B1BDCD transparent transparent;
+	}
+
+	.ypp_float{
+		float: left;
+		column-fill: balance;
+	}
+
+	.ypp_clear{
+		height:50px;
+		clear: both;
+	}
+	.ypp_commentSpan3{
+		line-height: 70px;
+		color:#0C6894;
+		font-family: "华文行楷";
+		
+		font-weight: bold;
+		font-size: 20px;
+	}
+	.ypp_commentSpan4{
+		display: block;
+		text-align: right;
+		font-size: 13px;
+		color:aliceblue;
+	}
+/*	我要发表*/
+	.ypp_commentPublish{
+		width:680px;
+		padding:20px 65px 20px 65px;	
+	}
+	.ypp_commentPublishInfo{
+		text-align: left;
+		font-family: "幼圆";
+		font-size: 16px;
+		font-weight: bold;
+		color: cadetblue;
+	}
+	.ypp_disableCommentPublishContent,.ypp_enableCommentPublishContent{
+		background-color: #E0EBF2;
+		margin-top:10px;
+		border-top: 2px solid #9A9A9A;
+		border-left: 2px solid #9A9A9A;
+		padding-bottom: 0px;
+		padding:10px;
+		resize:none;
+	}
+	.ypp_commentTip{
+		height: 25px;
+		font-size: 15px;
+		line-height: 25px;
+		color:#D10A0D;
+		text-align: left;
+		padding-left: 10px;
+	}
+	.ypp_commentSubmit{
+		padding:2px 20px 2px 20px;
+	}
+	.ypp_commentA{
+		display: block;
+		text-align: left;
+		text-decoration: none;
+		color: darkcyan;
+		font-size: 15px;
+	}
+	.ypp_commentA:hover,.ypp_commentlogin:hover,.ypp_commentUser:hover{
+		color:#C46EF0;	
+	}
+	.ypp_commentlogin,.ypp_commentUser{
+		display: block;
+		text-align: right;
+		text-decoration: none;
+		color: darkcyan;
+		font-size: 15px;
+		margin-right: 90px;
+		width:740px;
+	}
